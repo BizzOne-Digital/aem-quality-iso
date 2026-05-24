@@ -13,9 +13,10 @@ export default function ContactPage() {
     setStatus("sending");
     try {
       const res = await fetch("/api/contact", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(form) });
+      const data = await res.json().catch(() => ({}));
       if(res.ok) { setStatus("success"); setForm({ fname:"", lname:"", email:"", phone:"", company:"", service:"", budget:"", message:"", how:"" }); }
-      else setStatus("error");
-    } catch { setStatus("error"); }
+      else { console.error("API error:", data); setStatus("error"); }
+    } catch(err) { console.error("Fetch error:", err); setStatus("error"); }
   };
 
   const inputStyle: React.CSSProperties = { width:"100%", fontFamily:"var(--font-barlow,Barlow,sans-serif)", fontSize:15, color:"#0d1b35", background:"#f4f7fb", border:"1px solid #e4eaf5", borderRadius:8, padding:"13px 16px", outline:"none", transition:"all 0.2s", appearance:"none" as const };
