@@ -47,10 +47,10 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div style={{ paddingTop:74 }}>
+    <div style={{ paddingTop:74, overflowX:"hidden", maxWidth:"100vw" }}>
       {/* HERO */}
-      <section style={{ background:"#0a1f44", padding:"96px 24px 80px", position:"relative", overflow:"hidden" }}>
-        <div style={{ position:"absolute", inset:0, background:"radial-gradient(ellipse 60% 70% at 60% 50%, rgba(26,86,219,0.2) 0%, transparent 70%)" }} />
+      <section style={{ background:"#0a1f44", padding:"96px 24px 80px", position:"relative", overflow:"hidden", maxWidth:"100%" }}>
+        <div style={{ position:"absolute", inset:0, maxWidth:"100%", background:"radial-gradient(ellipse 60% 70% at 60% 50%, rgba(26,86,219,0.2) 0%, transparent 70%)" }} />
         <div style={{ position:"absolute", inset:0, backgroundImage:"linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px)", backgroundSize:"60px 60px" }} />
         <div style={{ maxWidth:1240, margin:"0 auto", position:"relative", zIndex:2, textAlign:"center" }}>
           <span style={{ display:"inline-block", fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:"3px", textTransform:"uppercase", color:"#3b82f6", background:"rgba(26,86,219,0.2)", border:"1px solid rgba(26,86,219,0.35)", padding:"6px 18px", borderRadius:50, marginBottom:20 }}>Our Services</span>
@@ -69,14 +69,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* QUICK NAV */}
-      <div style={{ background:"#fff", borderBottom:"1px solid #e4eaf5", padding:"0 24px", position:"sticky", top:74, zIndex:100 }}>
-        <div style={{ maxWidth:1240, margin:"0 auto", display:"flex", gap:0, overflowX:"auto" }}>
-          {services.map(s => (
-            <a key={s.id} href={`#${s.id}`} style={{ fontFamily:"Montserrat,sans-serif", fontSize:11, fontWeight:700, letterSpacing:"1px", textTransform:"uppercase", color:"#3d4f6b", textDecoration:"none", padding:"16px 24px", borderBottom:"2px solid transparent", whiteSpace:"nowrap", flexShrink:0 }}>{s.num} {s.name.split("&")[0].trim().substring(0,18)}</a>
-          ))}
-        </div>
-      </div>
+     
 
       {/* EACH SERVICE */}
       {services.map((s, i) => (
@@ -115,7 +108,7 @@ export default function ServicesPage() {
               {/* Sidebar */}
               <div style={{ order: i%2===0 ? 2 : 1, display:"flex", flexDirection:"column", gap:18 }}>
                 {/* Price card */}
-                <div style={{ background:"#0a1f44", borderRadius:16, padding:"32px 28px", position:"relative", overflow:"hidden" }}>
+                <div style={{ background:"#0a1f44", borderRadius:16, padding:"32px 28px", position:"relative", overflow:"hidden", maxWidth:"100%" }}>
                   <div style={{ position:"absolute", top:-20, right:-20, width:100, height:100, borderRadius:"50%", background:"rgba(26,86,219,0.15)" }} />
                   <div style={{ color:"#1a56db", marginBottom:16 }}>{s.icon}</div>
                   <h3 style={{ fontFamily:"Montserrat,sans-serif", fontSize:16, fontWeight:800, color:"#fff", marginBottom:16 }}>{s.name}</h3>

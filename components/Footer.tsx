@@ -3,7 +3,7 @@ import { Phone, Mail, Globe, MapPin, Shield } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#060f22", padding: "72px 0 0" }}>
+    <footer style={{ background: "#060f22", padding: "72px 0 0", overflowX: "hidden", maxWidth: "100%" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 24px" }}>
         <div
           style={{

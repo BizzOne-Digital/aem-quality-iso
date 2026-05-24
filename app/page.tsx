@@ -41,10 +41,10 @@ export default function HomePage() {
   const addRef = (el: HTMLElement | null) => { if(el && !fadeRefs.current.includes(el)) fadeRefs.current.push(el); };
 
   return (
-    <div style={{ paddingTop:74 }}>
+    <div style={{ paddingTop:74, overflowX:"hidden", maxWidth:"100vw" }}>
       {/* HERO */}
-      <section style={{ minHeight:"100vh", background:"#0a1f44", display:"flex", alignItems:"center", position:"relative", overflow:"hidden" }}>
-        <div style={{ position:"absolute", inset:0, background:"radial-gradient(ellipse 80% 60% at 70% 40%, rgba(26,86,219,0.22) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 15% 80%, rgba(0,194,255,0.07) 0%, transparent 60%), linear-gradient(155deg,#0a1f44 0%,#0d2860 55%,#0a1f44 100%)" }} />
+      <section style={{ minHeight:"100vh", background:"#0a1f44", display:"flex", alignItems:"center", position:"relative", overflow:"hidden", maxWidth:"100%" }}>
+        <div style={{ position:"absolute", inset:0, maxWidth:"100%", background:"radial-gradient(ellipse 80% 60% at 70% 40%, rgba(26,86,219,0.22) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 15% 80%, rgba(0,194,255,0.07) 0%, transparent 60%), linear-gradient(155deg,#0a1f44 0%,#0d2860 55%,#0a1f44 100%)" }} />
         <div style={{ position:"absolute", inset:0, backgroundImage:"linear-gradient(rgba(255,255,255,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.022) 1px,transparent 1px)", backgroundSize:"64px 64px" }} />
         <div style={{ maxWidth:1240, margin:"0 auto", padding:"110px 24px", position:"relative", zIndex:2, width:"100%" }} className="hero-flex">
           <div className="hero-left-col">
@@ -59,12 +59,12 @@ export default function HomePage() {
             </h1>
             <p style={{ fontSize:17, color:"rgba(255,255,255,0.62)", lineHeight:1.82, marginBottom:14, maxWidth:520 }}>End-to-end ISO 9001 support for SMEs and ambitious businesses — from your first assessment all the way to certification. We take the complexity out of compliance.</p>
             <p style={{ fontFamily:"var(--font-montserrat)", fontSize:11, fontWeight:700, letterSpacing:"3px", textTransform:"uppercase", color:"#3b82f6", marginBottom:36 }}>Assessment · Implementation · Documentation · Training · Certification</p>
-            <div style={{ display:"flex", flexWrap:"wrap", gap:10, marginBottom:40 }}>
+            <div style={{ display:"flex", flexWrap:"wrap", gap:8, marginBottom:40, maxWidth:"100%" }}>
               {["Gap Analysis","Quality Manual","Internal Audits","Team Training","Certification Ready"].map(t => (
                 <span key={t} style={{ fontFamily:"var(--font-montserrat)", fontSize:10, fontWeight:600, letterSpacing:"1.5px", textTransform:"uppercase", padding:"7px 16px", border:"1px solid rgba(255,255,255,0.18)", borderRadius:50, color:"rgba(255,255,255,0.65)" }}>{t}</span>
               ))}
             </div>
-            <div style={{ display:"flex", gap:16, flexWrap:"wrap" }}>
+            <div style={{ display:"flex", gap:12, flexWrap:"wrap", maxWidth:"100%" }}>
               <Link href="/contact" style={{ display:"inline-flex", alignItems:"center", gap:10, fontFamily:"var(--font-montserrat)", fontSize:12, fontWeight:700, letterSpacing:"1px", textTransform:"uppercase", padding:"16px 32px", background:"linear-gradient(135deg,#1a56db,#2563eb)", color:"#fff", borderRadius:8, textDecoration:"none", boxShadow:"0 8px 28px rgba(26,86,219,0.4)" }}>
                 Book Free 30-Min Consultation <ArrowRight size={16}/>
               </Link>
@@ -169,7 +169,7 @@ export default function HomePage() {
       <section style={{ padding:"96px 24px", background:"#fff" }}>
         <div style={{ maxWidth:1240, margin:"0 auto" }} className="about-flex">
           <div className="about-left">
-            <div style={{ background:"#0a1f44", borderRadius:20, padding:"52px 44px", position:"relative", overflow:"hidden" }}>
+            <div style={{ background:"#0a1f44", borderRadius:20, padding:"52px 44px", position:"relative", overflow:"hidden", maxWidth:"100%" }}>
               <div style={{ position:"absolute", top:-40, right:-40, width:180, height:180, borderRadius:"50%", background:"rgba(26,86,219,0.12)" }} />
               <p style={{ fontFamily:"var(--font-montserrat)", fontSize:9, fontWeight:700, letterSpacing:"3px", textTransform:"uppercase", color:"#3b82f6", marginBottom:6 }}>Founder & Principal Consultant</p>
               <h3 style={{ fontFamily:"var(--font-montserrat)", fontSize:24, fontWeight:900, color:"#fff", marginBottom:24 }}>Abdelali El-Magueri</h3>
@@ -230,8 +230,8 @@ export default function HomePage() {
       </section>
 
       {/* CTA BANNER */}
-      <section style={{ padding:"72px 24px", background:"linear-gradient(135deg,#0a1f44 0%,#1a3a7a 100%)", position:"relative", overflow:"hidden" }}>
-        <div style={{ position:"absolute", inset:0, background:"radial-gradient(ellipse 50% 70% at 80% 50%, rgba(26,86,219,0.28) 0%, transparent 70%)" }} />
+      <section style={{ padding:"72px 24px", background:"linear-gradient(135deg,#0a1f44 0%,#1a3a7a 100%)", position:"relative", overflow:"hidden", maxWidth:"100%" }}>
+        <div style={{ position:"absolute", inset:0, maxWidth:"100%", background:"radial-gradient(ellipse 50% 70% at 80% 50%, rgba(26,86,219,0.28) 0%, transparent 70%)" }} />
         <div style={{ maxWidth:1240, margin:"0 auto", position:"relative", zIndex:2 }} className="cta-banner-inner">
           <div className="cta-banner-text">
             <h2 style={{ fontFamily:"Montserrat,sans-serif", fontSize:"clamp(22px,3.5vw,38px)", fontWeight:900, color:"#fff", marginBottom:10, lineHeight:1.2 }}>Ready to Start Your <span style={{ color:"#00c2ff" }}>ISO 9001 Journey?</span></h2>

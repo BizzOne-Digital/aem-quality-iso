@@ -15,10 +15,10 @@ export default function AboutPage() {
   const tagStyle: React.CSSProperties = { display:"inline-block", fontFamily:"var(--font-montserrat)", fontSize:10, fontWeight:700, letterSpacing:"3px", textTransform:"uppercase", color:"#1a56db", background:"rgba(26,86,219,0.08)", padding:"6px 16px", borderRadius:50, marginBottom:14 };
 
   return (
-    <div style={{ paddingTop:74 }}>
+    <div style={{ paddingTop:74, overflowX:"hidden", maxWidth:"100vw" }}>
       {/* HERO */}
-      <section style={{ background:"#0a1f44", padding:"96px 24px 80px", position:"relative", overflow:"hidden" }}>
-        <div style={{ position:"absolute", inset:0, background:"radial-gradient(ellipse 60% 80% at 40% 50%, rgba(26,86,219,0.2) 0%, transparent 70%)" }} />
+      <section style={{ background:"#0a1f44", padding:"96px 24px 80px", position:"relative", overflow:"hidden", maxWidth:"100%" }}>
+        <div style={{ position:"absolute", inset:0, maxWidth:"100%", background:"radial-gradient(ellipse 60% 80% at 40% 50%, rgba(26,86,219,0.2) 0%, transparent 70%)" }} />
         <div style={{ position:"absolute", inset:0, backgroundImage:"linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px)", backgroundSize:"60px 60px" }} />
         <div style={{ maxWidth:1240, margin:"0 auto", position:"relative", zIndex:2 }} className="about-hero-flex">
           <div className="about-hero-left">
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div style={{ display:"grid", gridTemplateColumns:"1fr 2fr", gap:52, alignItems:"start" }} className="founder-flex">
             {/* Visual card */}
             <div ref={addRef} className="fade-up">
-              <div style={{ background:"#0a1f44", borderRadius:20, padding:"40px 36px", position:"relative", overflow:"hidden", marginBottom:20 }}>
+              <div style={{ background:"#0a1f44", borderRadius:20, padding:"40px 36px", position:"relative", overflow:"hidden", maxWidth:"100%", marginBottom:20 }}>
                 <div style={{ position:"absolute", top:-30, right:-30, width:140, height:140, borderRadius:"50%", background:"rgba(26,86,219,0.15)" }} />
                 <div style={{ position:"absolute", bottom:-20, left:-20, width:100, height:100, borderRadius:"50%", background:"rgba(0,194,255,0.07)" }} />
                 <div style={{ width:80, height:80, borderRadius:"50%", background:"linear-gradient(135deg,#1a56db,#2563eb)", display:"flex", alignItems:"center", justifyContent:"center", marginBottom:20, fontFamily:"var(--font-montserrat)", fontSize:28, fontWeight:900, color:"#fff" }}>A</div>

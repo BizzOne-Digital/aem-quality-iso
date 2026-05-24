@@ -47,10 +47,10 @@ const steps = [
 
 export default function ProcessPage() {
   return (
-    <div style={{ paddingTop:74 }}>
+    <div style={{ paddingTop:74, overflowX:"hidden", maxWidth:"100vw" }}>
       {/* HERO */}
-      <section style={{ background:"#0a1f44", padding:"96px 24px 80px", position:"relative", overflow:"hidden" }}>
-        <div style={{ position:"absolute", inset:0, background:"radial-gradient(ellipse 70% 60% at 50% 50%, rgba(26,86,219,0.2) 0%, transparent 70%)" }} />
+      <section style={{ background:"#0a1f44", padding:"96px 24px 80px", position:"relative", overflow:"hidden", maxWidth:"100%" }}>
+        <div style={{ position:"absolute", inset:0, maxWidth:"100%", background:"radial-gradient(ellipse 70% 60% at 50% 50%, rgba(26,86,219,0.2) 0%, transparent 70%)" }} />
         <div style={{ position:"absolute", inset:0, backgroundImage:"linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px)", backgroundSize:"60px 60px" }} />
         <div style={{ maxWidth:1240, margin:"0 auto", position:"relative", zIndex:2, textAlign:"center" }}>
           <span style={{ display:"inline-block", fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:"3px", textTransform:"uppercase", color:"#3b82f6", background:"rgba(26,86,219,0.2)", border:"1px solid rgba(26,86,219,0.35)", padding:"6px 18px", borderRadius:50, marginBottom:20 }}>Our Process</span>
@@ -109,7 +109,7 @@ export default function ProcessPage() {
               {/* Sidebar */}
               <div style={{ display:"flex", flexDirection:"column", gap:20 }}>
                 {/* Outcome */}
-                <div style={{ background:"#0a1f44", borderRadius:16, padding:"28px 32px", position:"relative", overflow:"hidden" }}>
+                <div style={{ background:"#0a1f44", borderRadius:16, padding:"28px 32px", position:"relative", overflow:"hidden", maxWidth:"100%" }}>
                   <div style={{ position:"absolute", top:-20, right:-20, width:100, height:100, borderRadius:"50%", background:"rgba(26,86,219,0.15)" }} />
                   <div style={{ fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:800, letterSpacing:"2px", textTransform:"uppercase", color:"#3b82f6", marginBottom:12 }}>Expected Outcome</div>
                   <p style={{ fontSize:15, color:"rgba(255,255,255,0.75)", lineHeight:1.8 }}>{step.outcome}</p>

@@ -22,10 +22,10 @@ export default function ContactPage() {
   const labelStyle: React.CSSProperties = { display:"block", fontFamily:"var(--font-montserrat)", fontSize:10, fontWeight:700, letterSpacing:"1.5px", textTransform:"uppercase", color:"#0a1f44", marginBottom:8 };
 
   return (
-    <div style={{ paddingTop:74 }}>
+    <div style={{ paddingTop:74, overflowX:"hidden", maxWidth:"100vw" }}>
       {/* HERO */}
-      <section style={{ background:"#0a1f44", padding:"96px 24px 80px", position:"relative", overflow:"hidden" }}>
-        <div style={{ position:"absolute", inset:0, background:"radial-gradient(ellipse 70% 60% at 60% 50%, rgba(26,86,219,0.2) 0%, transparent 70%)" }} />
+      <section style={{ background:"#0a1f44", padding:"96px 24px 80px", position:"relative", overflow:"hidden", maxWidth:"100%" }}>
+        <div style={{ position:"absolute", inset:0, maxWidth:"100%", background:"radial-gradient(ellipse 70% 60% at 60% 50%, rgba(26,86,219,0.2) 0%, transparent 70%)" }} />
         <div style={{ position:"absolute", inset:0, backgroundImage:"linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px)", backgroundSize:"60px 60px" }} />
         <div style={{ maxWidth:800, margin:"0 auto", position:"relative", zIndex:2, textAlign:"center" }}>
           <span style={{ display:"inline-block", fontFamily:"var(--font-montserrat)", fontSize:10, fontWeight:700, letterSpacing:"3px", textTransform:"uppercase", color:"#3b82f6", background:"rgba(26,86,219,0.2)", border:"1px solid rgba(26,86,219,0.35)", padding:"6px 18px", borderRadius:50, marginBottom:20 }}>Contact Us</span>
@@ -56,7 +56,7 @@ export default function ContactPage() {
             {/* INFO SIDEBAR */}
             <div>
               {/* Contact Card */}
-              <div style={{ background:"#0a1f44", borderRadius:20, padding:"40px 36px", marginBottom:24, position:"relative", overflow:"hidden" }}>
+              <div style={{ background:"#0a1f44", borderRadius:20, padding:"40px 36px", marginBottom:24, position:"relative", overflow:"hidden", maxWidth:"100%" }}>
                 <div style={{ position:"absolute", bottom:-30, right:-30, width:140, height:140, borderRadius:"50%", background:"rgba(26,86,219,0.12)" }} />
                 <h3 style={{ fontFamily:"var(--font-montserrat)", fontSize:18, fontWeight:800, color:"#fff", marginBottom:8 }}>Get in Touch</h3>
                 <p style={{ fontSize:14, color:"rgba(255,255,255,0.5)", lineHeight:1.7, marginBottom:32 }}>Reach out through any channel — we respond within 24 hours on business days.</p>
