@@ -210,6 +210,122 @@ export default function ServicesPage() {
         </section>
       ))}
 
+      {/* DICTIONNAIRE AMÉLIORATION CONTINUE */}
+      <section style={{ padding:"88px 24px", background:"#f4f7fb" }} id="dictionnaire">
+        <div style={{ maxWidth:1240, margin:"0 auto" }}>
+          <div style={{ textAlign:"center", marginBottom:52 }}>
+            <span style={{ display:"inline-block", fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:"3px", textTransform:"uppercase", color:"#1a56db", background:"rgba(26,86,219,0.08)", padding:"6px 16px", borderRadius:50, marginBottom:14 }}>
+              {lang==="fr" ? "Ressource Formation" : "Training Resource"}
+            </span>
+            <h2 style={{ fontFamily:"Montserrat,sans-serif", fontSize:"clamp(26px,4vw,40px)", fontWeight:800, color:"#0a1f44", lineHeight:1.15, marginBottom:14 }}>
+              {lang==="fr" ? <>Dictionnaire de<br/><span style={{ color:"#2563eb" }}>l&apos;Amélioration Continue</span></> : <>Dictionary of<br/><span style={{ color:"#2563eb" }}>Continuous Improvement</span></>}
+            </h2>
+            <p style={{ fontSize:16, color:"#3d4f6b", lineHeight:1.75, maxWidth:580, margin:"0 auto" }}>
+              {lang==="fr"
+                ? "Les concepts clés enseignés dans nos formations qualité — maîtrisez le vocabulaire de l'excellence opérationnelle."
+                : "Key concepts taught in our quality training sessions — master the vocabulary of operational excellence."}
+            </p>
+          </div>
+
+          <div className="dict-grid">
+            {[
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="16" width="6" height="8" rx="1" fill="#1a56db"/><rect x="11" y="10" width="6" height="14" rx="1" fill="#1a56db" opacity=".6"/><rect x="18" y="4" width="6" height="20" rx="1" fill="#1a56db" opacity=".3"/><path d="M6 14l5-5 5 3 6-8" stroke="#1a56db" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+                term:"Kaizen",
+                en:"Daily continuous improvement — small, incremental changes made by everyone, every day.",
+                fr:"Amélioration continue quotidienne — petits changements progressifs réalisés par tous, chaque jour.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#1a56db" strokeWidth="2" fill="none"/><text x="8" y="12" fontFamily="Montserrat" fontSize="6" fontWeight="700" fill="#1a56db">P</text><text x="18" y="12" fontFamily="Montserrat" fontSize="6" fontWeight="700" fill="#1a56db">D</text><text x="8" y="21" fontFamily="Montserrat" fontSize="6" fontWeight="700" fill="#1a56db">A</text><text x="18" y="21" fontFamily="Montserrat" fontSize="6" fontWeight="700" fill="#1a56db">C</text></svg>,
+                term:"PDCA",
+                en:"Plan-Do-Check-Act — a 4-step method for planning, executing, verifying, and improving.",
+                fr:"Planifier-Déployer-Contrôler-Agir — méthode pour planifier, exécuter, vérifier et agir.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C14 4 6 9 6 16a8 8 0 0016 0c0-7-8-12-8-12z" stroke="#1a56db" strokeWidth="2" fill="none"/><circle cx="14" cy="16" r="2.5" fill="#1a56db"/></svg>,
+                term:"Gemba",
+                en:"The actual place where work happens — where processes and value are created.",
+                fr:"Lieu où le travail et les processus se déroulent réellement — là où la valeur est créée.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#1a56db" strokeWidth="2" fill="none"/><path d="M14 8v6l4 2" stroke="#1a56db" strokeWidth="2" strokeLinecap="round"/></svg>,
+                term:"Takt Time",
+                en:"The ideal production pace calculated from customer demand — how fast you need to produce.",
+                fr:"Rythme de production idéal selon la demande client — la cadence à laquelle vous devez produire.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="6" width="16" height="16" rx="2" stroke="#1a56db" strokeWidth="2" fill="none"/><path d="M10 10h8M10 14h8M10 18h5" stroke="#1a56db" strokeWidth="1.5" strokeLinecap="round"/><path d="M20 4l2 2-2 2" stroke="#1a56db" strokeWidth="1.5" strokeLinecap="round"/></svg>,
+                term:"Muda",
+                en:"Waste — any activity that consumes resources but creates no value for the customer.",
+                fr:"Gaspillages qui n'ajoutent pas de valeur — toute activité qui consomme des ressources sans créer de valeur.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="8" width="8" height="12" rx="1" stroke="#1a56db" strokeWidth="2" fill="none"/><rect x="16" y="8" width="8" height="12" rx="1" stroke="#1a56db" strokeWidth="2" fill="none"/><path d="M12 14h4" stroke="#1a56db" strokeWidth="2" strokeLinecap="round"/></svg>,
+                term:"Kanban",
+                en:"A visual system for managing workflow, limiting work-in-progress, and improving flow.",
+                fr:"Système visuel pour gérer et fluidifier le flux de travail en limitant les encours.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="3" stroke="#1a56db" strokeWidth="2" fill="none"/><text x="9" y="19" fontFamily="Montserrat" fontSize="10" fontWeight="900" fill="#1a56db">5S</text></svg>,
+                term:"5S",
+                en:"Sort, Set in order, Shine, Standardize, Sustain — workplace organization and discipline.",
+                fr:"Trier, Ranger, Nettoyer, Standardiser, Maintenir — organisation et discipline du lieu de travail.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#1a56db" strokeWidth="2" fill="none"/><text x="10" y="18" fontFamily="Montserrat" fontSize="12" fontWeight="900" fill="#1a56db">σ</text></svg>,
+                term:"DMAIC",
+                en:"Define-Measure-Analyze-Improve-Control — the core Six Sigma structured problem-solving method.",
+                fr:"Définir-Mesurer-Analyser-Améliorer-Contrôler — méthode structurée du Six Sigma.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#1a56db" strokeWidth="2" fill="none"/><path d="M9 14a5 5 0 015-5" stroke="#1a56db" strokeWidth="2" strokeLinecap="round"/><circle cx="19" cy="14" r="2" fill="#1a56db"/></svg>,
+                term:"OEE",
+                en:"Overall Equipment Effectiveness — key indicator measuring operational efficiency of equipment.",
+                fr:"Indicateur d'efficacité opérationnelle globale des équipements de production.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#1a56db" strokeWidth="2" fill="none"/><path d="M14 8v6l3 3" stroke="#1a56db" strokeWidth="2" strokeLinecap="round"/><circle cx="8" cy="8" r="2" fill="#1a56db"/></svg>,
+                term:"Lead Time",
+                en:"Total time required to deliver a product or service from order to delivery.",
+                fr:"Temps total nécessaire pour livrer un produit ou un service de la commande à la livraison.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#1a56db" strokeWidth="2" fill="none"/><path d="M10 18l-2-2 2-2M18 18l2-2-2-2M13 9l2 10" stroke="#1a56db" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+                term:"TPM",
+                en:"Total Productive Maintenance — maintenance method involving all employees to maximize equipment availability.",
+                fr:"Maintenance productive totale — implique tous les collaborateurs pour maximiser la disponibilité des équipements.",
+              },
+              {
+                icon:<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 22L22 6M6 6h6M22 6v6" stroke="#1a56db" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><circle cx="8" cy="20" r="2" fill="#1a56db"/></svg>,
+                term:"8D",
+                en:"Eight Disciplines — structured team-based problem solving method for root cause elimination.",
+                fr:"Huit disciplines — méthode structurée de résolution de problèmes en équipe pour éliminer les causes racines.",
+              },
+            ].map((item, i) => (
+              <div key={i} style={{ background:"#fff", border:"1px solid #e4eaf5", borderRadius:14, padding:"22px 20px", display:"flex", gap:16, alignItems:"flex-start", transition:"all 0.25s" }} className="dict-card">
+                <div style={{ width:52, height:52, borderRadius:12, background:"rgba(26,86,219,0.07)", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+                  {item.icon}
+                </div>
+                <div style={{ flex:1 }}>
+                  <div style={{ fontFamily:"Montserrat,sans-serif", fontSize:16, fontWeight:900, color:"#0a1f44", marginBottom:6 }}>{item.term}</div>
+                  <div style={{ width:32, height:2, background:"#1a56db", borderRadius:2, marginBottom:8 }} />
+                  <p style={{ fontSize:13, color:"#3d4f6b", lineHeight:1.65 }}>{lang==="fr" ? item.fr : item.en}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ textAlign:"center", marginTop:48, padding:"28px 32px", background:"linear-gradient(135deg,#0a1f44,#1a3a7a)", borderRadius:16 }}>
+            <p style={{ fontFamily:"Montserrat,sans-serif", fontSize:13, fontWeight:700, color:"rgba(255,255,255,0.65)", letterSpacing:"1px", marginBottom:10 }}>
+              {lang==="fr" ? "Tous ces concepts sont enseignés dans nos formations sur mesure." : "All these concepts are taught in our customized training sessions."}
+            </p>
+            <Link href="/contact" style={{ display:"inline-flex", alignItems:"center", gap:10, fontFamily:"Montserrat,sans-serif", fontSize:12, fontWeight:700, letterSpacing:"1px", textTransform:"uppercase", padding:"13px 28px", background:"linear-gradient(135deg,#1a56db,#2563eb)", color:"#fff", borderRadius:8, textDecoration:"none" }}>
+              {lang==="fr" ? "Réserver une formation" : "Book a Training Session"} <ArrowRight size={15}/>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section style={{ padding:"80px 24px", background:"#0a1f44" }}>
         <div style={{ maxWidth:800, margin:"0 auto", textAlign:"center" }}>
@@ -221,7 +337,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <style>{`.svc-det-grid{display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:start;} @media(max-width:960px){.svc-det-grid{grid-template-columns:1fr!important;} .svc-det-grid > div{order:unset!important;}}`}</style>
+      <style>{`.svc-det-grid{display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:start;} .dict-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;} .dict-card:hover{border-color:#1a56db!important;box-shadow:0 8px 24px rgba(26,86,219,0.1)!important;transform:translateY(-2px);} @media(max-width:960px){.svc-det-grid{grid-template-columns:1fr!important;} .svc-det-grid > div{order:unset!important;} .dict-grid{grid-template-columns:1fr 1fr!important;}} @media(max-width:600px){.dict-grid{grid-template-columns:1fr!important;}}`}</style>
     </div>
   );
 }
